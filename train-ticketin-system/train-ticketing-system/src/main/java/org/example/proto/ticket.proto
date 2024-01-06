@@ -1,0 +1,8 @@
+import "message.proto";
+service TrainTicketService {
+  rpc PurchaseTicket(Ticket) returns (Ticket);
+  rpc GetReceipt(User) returns (Ticket);
+  rpc ViewUsersBySection(User) returns (stream User);
+  rpc RemoveUser(User) returns (Ticket);
+  rpc ModifyUserSeat(User) returns (Ticket);
+}
